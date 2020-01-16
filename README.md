@@ -27,5 +27,7 @@ In the creation of the application the MERN stack will be used, which consists o
 MongoDB is a NoSQL database language used in the development of web applications. It will be used to store the information of the packages which are being sold, allowing the client to update, and alter them at will. The MongoAtlas cloud tool will be used as the management system responsible for handling the intricacies of the database. In order to create the server and API the express.js framework is to be used, it is one of the most popular web application frameworks built on JavaScript. Both of these technologies will use the node runtime environment which is designed to execute native JavaScript code outside of a web browser, and also permits the use of a large variety of existing functionality native the node extension. 
 
 ## User Stories
-[Link To Trello Board] (https://trello.com/b/v73DMPfk/home-salon-redcliffe)
+
+[Link To Trello Board](https://trello.com/b/v73DMPfk/home-salon-redcliffe)
+
 ![user stories](./docs/Trello/User_Stories.png)
