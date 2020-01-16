@@ -31,3 +31,24 @@ MongoDB is a NoSQL database language used in the development of web applications
 [Link To Trello Board](https://trello.com/b/v73DMPfk/home-salon-redcliffe)
 
 ![user stories](./docs/Trello/User_Stories.png)
+
+## Wire Frames
+**Home**
+
+![Home](./docs/wireframing/Home.png)
+
+**Contact**
+
+![Contact](./docs/wireframing/contact.png)
+
+**Rates**
+
+![Rates](./docs/wireframing/Rates.png)
+
+**Images**
+
+![Images](./docs/wireframing/images.png)
+
+**Testimonials**
+
+![Testimonials](./docs/wireframing/testimonials.png)
