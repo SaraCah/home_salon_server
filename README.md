@@ -33,6 +33,7 @@ MongoDB is a NoSQL database language used in the development of web applications
 ![user stories](./docs/Trello/User_Stories.png)
 
 ## Wire Frames
+### Desktop
 **Home**
 
 ![Home](./docs/wireframing/Home.png)
@@ -52,3 +53,21 @@ MongoDB is a NoSQL database language used in the development of web applications
 **Testimonials**
 
 ![Testimonials](./docs/wireframing/testimonials.png)
+
+### Mobile
+**Home**
+![Home Mobile](./docs/wireframing/HomePhone.png)
+
+**Contact**
+![Contact Mobile](./docs/wireframing/ContactPhone.png)
+
+**Rates**
+![Rates Mobile](./docs/wireframing/RatesPhone.png)
+
+**Images**
+![Images Mobile](./docs/wireframing/ImagesPhone.png)
+
+**Testimonials**
+![Testimonials Mobile](./docs/wireframing/TestimonialsPhone.png)
+
+
