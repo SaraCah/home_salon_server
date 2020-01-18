@@ -76,4 +76,35 @@ MongoDB is a NoSQL database language used in the development of web applications
 
 ![Testimonials Mobile](./docs/wireframing/TestimonialsPhone.png)
 
+## Project Management
+Below is a list of tools we used on this project:
+-	wireframes.cc
+-	trello.com
+-	stackedit.io
+-	cava.com
+-	pinterest.com.au
+-	google docs
+-	Slack
+-	GitHub
+-	AWS
+-	Heroku
+-	Cypress
+
+We used wireframes.cc to create the wireframes, stackedit for the README.md file, canva and pinterest was for design ideas, we created a dev log and shared it on google docs, this was to keep a log of all team or client meetings and who was working on what. Slack was essential for communication. GitHub was used for source control and we deployed using AWS for front end and Heroku for the backend. Cypress was utilised for all testing.
+### Design Samples
+![Moodboard](./docs/style_ideas/home_salon_moodboard.png)
+![Fonts](./docs/style_ideas/fonts-1.png)
+![Background](./docs/style_ideas/background-2.png)
+![Website](./docs/style_ideas/website2.png)
+![Website](./docs/style_ideas/website3.png) 
+
+### Slack Sample
+![Slack](./docs/slack_example.png)
+
+### Development Log
+![Dev Log](./docs/dev_log.docx)
+
+
+
+
 
