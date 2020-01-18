@@ -102,7 +102,7 @@ We used wireframes.cc to create the wireframes, stackedit for the README.md file
 ![Slack](./docs/slack_example.png)
 
 ### Development Log
-![Dev Log](./docs/dev_log.docx)
+[Link to Dev Log](./docs/dev_log.docx)
 
 
 
