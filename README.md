@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Home Salon Redcliffe
+=======
+﻿# Home Salon Redcliffe 
+>>>>>>> 1ca39ca85638a765f554b00948e22f9cd40f522b
 
 ## Purpose
 
@@ -27,7 +31,90 @@ Potential employers in the tech space are also apart of the target audience as t
 
 ## Tech Stack
 
+<<<<<<< HEAD
 In the creation of the application the MERN stack will be used, which consists of the following technologies:
+=======
+## User Stories
+
+[Link To Trello Board](https://trello.com/b/v73DMPfk/home-salon-redcliffe)
+
+![user stories](./docs/Trello/User_Stories.png)
+
+## Wire Frames
+### Desktop
+**Home**
+
+![Home](./docs/wireframing/Home.png)
+
+**Contact**
+
+![Contact](./docs/wireframing/contact.png)
+
+**Rates**
+
+![Rates](./docs/wireframing/Rates.png)
+
+**Images**
+
+![Images](./docs/wireframing/images.png)
+
+**Testimonials**
+
+![Testimonials](./docs/wireframing/testimonials.png)
+
+### Mobile
+
+**Home**
+
+![Home Mobile](./docs/wireframing/HomePhone.png)
+
+**Contact**
+
+![Contact Mobile](./docs/wireframing/ContactPhone.png)
+
+**Rates**
+
+![Rates Mobile](./docs/wireframing/RatesPhone.png)
+
+**Images**
+
+![Images Mobile](./docs/wireframing/ImagesPhone.png)
+
+**Testimonials**
+
+![Testimonials Mobile](./docs/wireframing/TestimonialsPhone.png)
+
+## Project Management
+Below is a list of tools we used on this project:
+-	wireframes.cc
+-	trello.com
+-	stackedit.io
+-	cava.com
+-	pinterest.com.au
+-	google docs
+-	Slack
+-	GitHub
+-	AWS
+-	Heroku
+-	Cypress
+
+We used wireframes.cc to create the wireframes, stackedit for the README.md file, canva and pinterest was for design ideas, we created a dev log and shared it on google docs, this was to keep a log of all team or client meetings and who was working on what. Slack was essential for communication. GitHub was used for source control and we deployed using AWS for front end and Heroku for the backend. Cypress was utilised for all testing.
+### Design Samples
+![Moodboard](./docs/style_ideas/home_salon_moodboard.png)
+![Fonts](./docs/style_ideas/fonts-1.png)
+![Background](./docs/style_ideas/background-2.png)
+![Website](./docs/style_ideas/website2.png)
+![Website](./docs/style_ideas/website3.png) 
+
+### Slack Sample
+![Slack](./docs/slack_example.png)
+
+### Development Log
+[Link to Dev Log](./docs/dev_log.docx)
+
+
+
+>>>>>>> 1ca39ca85638a765f554b00948e22f9cd40f522b
 
 - MongoDB
 - Express.js
