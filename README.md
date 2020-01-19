@@ -27,6 +27,13 @@ Potential employers in the tech space are also apart of the target audience as t
 
 ## Tech Stack
 
+MongoDB is a NoSQL database language used in the development of web applications. It will be used to store the information of the packages which are being sold, allowing the client to update, and alter them at will. The MongoAtlas cloud tool will be used as the management system responsible for handling the intricacies of the database. In order to create the server and API the express.js framework is to be used, it is one of the most popular web application frameworks built on JavaScript. Both of these technologies will use the node runtime environment which is designed to execute native JavaScript code outside of a web browser, and also permits the use of a large variety of existing functionality native the node extension. The React.js framework will be used for the front-end of the application in order to create the UI. Below is a list of the technology stack used in the development of the application.
+
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+
 ## User Stories
 
 [Link To Trello Board](https://trello.com/b/v73DMPfk/home-salon-redcliffe)
@@ -112,13 +119,6 @@ We used wireframes.cc to create the wireframes, stackedit for the README.md file
 ### Development Log
 
 [Link to Dev Log](./docs/dev_log.docx)
-
-- MongoDB
-- Express.js
-- React.js
-- Node.js
-
-MongoDB is a NoSQL database language used in the development of web applications. It will be used to store the information of the packages which are being sold, allowing the client to update, and alter them at will. The MongoAtlas cloud tool will be used as the management system responsible for handling the intricacies of the database. In order to create the server and API the express.js framework is to be used, it is one of the most popular web application frameworks built on JavaScript. Both of these technologies will use the node runtime environment which is designed to execute native JavaScript code outside of a web browser, and also permits the use of a large variety of existing functionality native the node extension.
 
 ## Dataflow Diagram
 
