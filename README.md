@@ -126,4 +126,4 @@ MongoDB is a NoSQL database language used in the development of web applications
 
 ## App Architecture Diagram
 
-![AppArchitecture](./docs/Diagrams/Dataflow_Diagram.png)
+![AppArchitecture](./docs/Diagrams/App_Architecture_Diagram.png)
