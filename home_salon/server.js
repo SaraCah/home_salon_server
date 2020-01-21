@@ -1,7 +1,10 @@
 const express = require('express')
-
+const dbConnection = require('./config/database')
 // call express and store in app variable
 const app = express()
+
+// call function connect database to express server (./config/database)
+dbConnection()
 
 // Get req to '/' to make sure everythings working properly
 app.get('/', (req, res) => res.send('API running correctly'))
