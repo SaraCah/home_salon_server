@@ -1,25 +1,3 @@
 node_modules/
-
+salon/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-salon/node_modules
-salon/.pnp
-.salon/.pnp.js
-
-# testing
-salon/coverage
-
-# production
-salon/build
-
-# misc
-salon/.DS_Store
-salon/.env.local
-salon/.env.development.local
-salon.env.test.local
-salon/.env.production.local
-
-salon/npm-debug.log*
-salon/yarn-debug.log*
-salon/yarn-error.log*
