@@ -4,7 +4,10 @@
   "description": "home_salon application built using the MERN stack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server",
+    "client": "npm start --prefix home_salon_client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
