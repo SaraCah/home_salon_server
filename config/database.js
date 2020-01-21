@@ -20,4 +20,4 @@ const dbConnection = async () => {
   }
 }
 
-export default dbConnection
+module.exports = dbConnection
