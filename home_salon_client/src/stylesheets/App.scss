@@ -1,0 +1,18 @@
+// When Using a new color, add it here and pass throughout as variable
+:root {
+  --background-color: ;
+  --nav-color: ;
+  --link-color: ;
+}
+
+.body {
+  background-color: ;
+}
+
+.container {
+  width: 80vw;
+  .grid-3-item {
+    display: grid;
+    grid-gap: 50px 50px;
+  }
+}

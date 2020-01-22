@@ -1,12 +1,11 @@
 import React from 'react'
-// import './App.css'
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch
 } from 'react-router-dom'
-import MainNavigation from './shared/components/Navigation/MainNavigation'
+import MainNavigation from './Components/Navigation/MainNavigation'
 
 function App() {
   return (
