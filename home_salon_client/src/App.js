@@ -1,6 +1,5 @@
 
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -8,16 +7,24 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+import MainNavigation from './shared/components/Navigation/MainNavigation';
 
 
 import React from 'react'
 
 function App() {
   return (
-    <div>
-      <h1>Testing</h1>
-    </div>
-  )
+    <Router>
+      < MainNavigation />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </main>
+    </Router>
+  );
 }
 
 export default App
