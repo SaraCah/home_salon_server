@@ -5,18 +5,13 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom'
-import MainNavigation from './Components/Navigation/MainNavigation'
-
+import Header from './Components/Navigation/Header'
+import 'materialize-css/dist/css/materialize.min.css'
+import 'materialize-css/dist/js/materialize.min.js'
 function App() {
   return (
     <Router>
-      <MainNavigation />
-      <main>
-        <Switch>
-          <Route path='/' exact></Route>
-          <Redirect to='/' />
-        </Switch>
-      </main>
+      <Header />
     </Router>
   )
 }
