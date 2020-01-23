@@ -9,6 +9,9 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { useMediaQuery } from 'react-responsive'
+import ListItemText from '@material-ui/core/ListItemText'
+import ListItem from '@material-ui/core/ListItem'
+import List from '@material-ui/core/List'
 const Header = () => {
   const navStyles = makeStyles(theme => ({
     root: {
@@ -44,6 +47,22 @@ const Header = () => {
     </Button>
   ))
 
+  const mobileNav = side => (
+    <div
+      className={classes.list}
+      role='presentation'
+      // onClick={toggleDrawer(side, false)}
+      // onKeyDown={toggleDrawer(side, false)}
+    >
+      <List>
+        {navList.map(item => (
+          <ListItem button key={item}>
+            <ListItemText primary={item} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  )
   return (
     <AppBar position='static' classes={{ root: classes.root }}>
       <Toolbar classes={{ root: classes.root }}>
@@ -55,7 +74,7 @@ const Header = () => {
         >
           <MenuIcon />
         </IconButton>
-        {!mobileDevice && navItem}
+        {mobileDevice ? mobileNav : navItem}
       </Toolbar>
     </AppBar>
   )
