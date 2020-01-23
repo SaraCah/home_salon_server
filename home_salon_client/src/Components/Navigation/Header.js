@@ -71,25 +71,24 @@ const Header = () => {
     <AppBar position='static' classes={{ root: classes.root }}>
       <Toolbar classes={{ root: classes.root }}>
         <div>
-          <Button onClick={toggleDrawer('right', true)}>
-            {' '}
-            <IconButton
-              edge='start'
-              className={classes.menuButton}
-              aria-label='menu'
-            >
-              <MenuIcon />
-            </IconButton>
-          </Button>
+          {' '}
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            aria-label='menu'
+            onClick={toggleDrawer('right', true)}
+          >
+            <MenuIcon />
+          </IconButton>
           <Drawer
             anchor='right'
             open={state.right}
             onClose={toggleDrawer('right', false)}
           >
-            {sideList('right')}
+            {mobileDevice && sideList('right')}
           </Drawer>
+          {!mobileDevice && navItem}
         </div>
-        {mobileDevice ? sideList : navItem}
       </Toolbar>
     </AppBar>
   )

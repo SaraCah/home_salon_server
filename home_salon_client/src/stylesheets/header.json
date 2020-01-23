@@ -1,10 +1,9 @@
 {
   "root": {
     "backgroundColor": "#ffa0ea5b",
-    "justifyContent": "center",
-    "justifyContent": "space-evenly",
+    "justifyContent": "flex-end",
     "@media (max-width: 1224px)": {
-      "justifyContent": "flex-end"
+      "justifyContent": "flex-start"
     }
   },
   "menuButton": {
