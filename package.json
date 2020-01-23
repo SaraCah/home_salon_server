@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Jyeb/home_salon_server#readme",
   "dependencies": {
+    "@material-ui/core": "^4.9.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.4.1",
     "config": "^3.2.5",

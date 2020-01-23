@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { Tabs } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 const Header = () => {
   return (
     <nav>
       <div className='nav-wrapper'>
-        <Link to='/' data-target={'mobile-demo'} className='sidenav-trigger'>
-          <i className='material-icons'>menu</i>
-        </Link>
         <ul id='nav-mobile' className='right hide-on-med-and-down'>
           <li>
             <Link to='/' exact>
