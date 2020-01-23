@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Button,
@@ -20,9 +20,6 @@ const Header = () => {
   const navList = ['Home', 'About', 'Packages', 'Testimonials', 'Contact']
   const classes = navStyles()
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
     right: false
   })
   const toggleDrawer = (side, open) => event => {
@@ -39,13 +36,9 @@ const Header = () => {
   const navItem = navList.map(item => (
     <Button className={classes.navButton}>
       {item === 'Home' ? (
-        <Link to='/' exact>
-          {item}
-        </Link>
+        <Link to='/'>{item}</Link>
       ) : (
-        <Link to={`/${item}`} exact>
-          {item}
-        </Link>
+        <Link to={`/${item}`}>{item}</Link>
       )}
     </Button>
   ))
@@ -58,13 +51,13 @@ const Header = () => {
     >
       <List>
         {navList.map(item => (
-          <ListItem button key={item}>
+          <ListItem key={item}>
             {item === 'Home' ? (
-              <Link to='/' exact>
+              <Link to='/' key={item}>
                 {item}
               </Link>
             ) : (
-              <Link to={`/${item}`} exact>
+              <Link to={`/${item}`} key={item}>
                 {item}
               </Link>
             )}
