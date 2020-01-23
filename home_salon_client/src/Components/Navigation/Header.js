@@ -1,41 +1,49 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Tabs } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
+import { Tabs, Toolbar } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
+import { AppBar } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import { Button } from '@material-ui/core'
 const Header = () => {
+  const navStyles = makeStyles({
+    root: {
+      backgroundColor: '#ffa0ea5b',
+      justifyContent: 'flex-end'
+    }
+  })
+  const classes = navStyles()
   return (
-    <nav>
-      <div className='nav-wrapper'>
-        <ul id='nav-mobile' className='right hide-on-med-and-down'>
-          <li>
-            <Link to='/' exact>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to='/about' exact>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to='/packages' exact>
-              Packages
-            </Link>
-          </li>
-          <li>
-            <Link to='/testimonials' exact>
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link to='/contact' exact>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <AppBar position='static' classes={{ root: classes.root }}>
+      <Toolbar classes={{ root: classes.root }}>
+        <Button>
+          <Link to='/' exact>
+            Home
+          </Link>
+        </Button>
+        <Button>
+          <Link to='/about' exact>
+            About
+          </Link>
+        </Button>
+        <Button>
+          <Link to='/packages' exact>
+            Packages
+          </Link>
+        </Button>
+        <Button>
+          <Link to='/testimonials' exact>
+            Testimonials
+          </Link>
+        </Button>
+        <Button>
+          <Link to='/contact' exact>
+            Contact
+          </Link>
+        </Button>
+      </Toolbar>
+    </AppBar>
   )
 }
 
