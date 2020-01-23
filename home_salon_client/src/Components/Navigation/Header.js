@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   Button,
@@ -34,7 +34,7 @@ const Header = () => {
   }
 
   const navItem = navList.map(item => (
-    <Button className={classes.navButton}>
+    <Button className={classes.navButton} key={item}>
       {item === 'Home' ? (
         <Link to='/'>{item}</Link>
       ) : (
