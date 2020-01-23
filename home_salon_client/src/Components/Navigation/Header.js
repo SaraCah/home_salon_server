@@ -1,32 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core'
-import { Button, IconButton, AppBar, Toolbar } from '@material-ui/core'
+import {
+  Button,
+  IconButton,
+  AppBar,
+  Toolbar,
+  makeStyles
+} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import { useMediaQuery } from 'react-responsive'
 const Header = () => {
   const navStyles = makeStyles(theme => ({
     root: {
       backgroundColor: '#ffa0ea5b',
       justifyContent: 'flex-end',
-      // display: 'block',
-      '@media (max-width: 800px)': {
+      '@media (max-width: 1224px)': {
         justifyContent: 'flex-start'
-        // display: 'none'
       }
     },
     menuButton: {
       display: 'none',
-      '@media (max-width: 800px)': {
+      '@media (max-width: 1224px)': {
         position: 'relative',
         marginRight: '60vw',
         display: 'block'
       }
     }
   }))
+  const mobileDevice = useMediaQuery({ query: '(max-width: 1224px)' })
   const navList = ['Home', 'About', 'Packages', 'Testimonials', 'Contact']
   const classes = navStyles()
-  let navItem = navList.map(item => (
-    <Button>
+  const navItem = navList.map(item => (
+    <Button className={classes.navButton}>
       {item === 'Home' ? (
         <Link to='/' exact>
           {item}
@@ -50,7 +55,7 @@ const Header = () => {
         >
           <MenuIcon />
         </IconButton>
-        {navItem}
+        {!mobileDevice && navItem}
       </Toolbar>
     </AppBar>
   )
