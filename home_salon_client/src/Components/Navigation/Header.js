@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { useMediaQuery } from 'react-responsive'
-import ListItemText from '@material-ui/core/ListItemText'
 import ListItem from '@material-ui/core/ListItem'
 import List from '@material-ui/core/List'
 import Styling from '../../stylesheets/header'
@@ -60,7 +59,15 @@ const Header = () => {
       <List>
         {navList.map(item => (
           <ListItem button key={item}>
-            <ListItemText primary={item} />
+            {item === 'Home' ? (
+              <Link to='/' exact>
+                {item}
+              </Link>
+            ) : (
+              <Link to={`/${item}`} exact>
+                {item}
+              </Link>
+            )}
           </ListItem>
         ))}
       </List>
@@ -96,6 +103,3 @@ const Header = () => {
 }
 
 export default Header
-
-// function TemporaryDrawer() {
-//   const classes = useStyles()
