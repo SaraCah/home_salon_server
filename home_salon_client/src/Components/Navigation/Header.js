@@ -12,24 +12,10 @@ import { useMediaQuery } from 'react-responsive'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItem from '@material-ui/core/ListItem'
 import List from '@material-ui/core/List'
+import Styling from '../../stylesheets/header'
+const styling = Styling
 const Header = () => {
-  const navStyles = makeStyles(theme => ({
-    root: {
-      backgroundColor: '#ffa0ea5b',
-      justifyContent: 'flex-end',
-      '@media (max-width: 1224px)': {
-        justifyContent: 'flex-start'
-      }
-    },
-    menuButton: {
-      display: 'none',
-      '@media (max-width: 1224px)': {
-        position: 'relative',
-        marginRight: '60vw',
-        display: 'block'
-      }
-    }
-  }))
+  const navStyles = makeStyles(theme => styling)
   const mobileDevice = useMediaQuery({ query: '(max-width: 1224px)' })
   const navList = ['Home', 'About', 'Packages', 'Testimonials', 'Contact']
   const classes = navStyles()

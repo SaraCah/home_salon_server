@@ -1,0 +1,17 @@
+{
+  "root": {
+    "backgroundColor": "#ffa0ea5b",
+    "justifyContent": "flex-end",
+    "@media (max-width: 1224px)": {
+      "justifyContent": "flex-start"
+    }
+  },
+  "menuButton": {
+    "display": "none",
+    "@media (max-width: 1224px)": {
+      "position": "relative",
+      "marginRight": "60vw",
+      "display": "block"
+    }
+  }
+}
