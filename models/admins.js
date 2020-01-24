@@ -19,3 +19,7 @@ const AdminSchema = new mongoose.Schema({
     required: true
   }
 })
+
+const AdminModel = mongoose.model('admin', AdminSchema)
+
+module.exports = AdminModel

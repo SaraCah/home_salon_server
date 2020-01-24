@@ -11,3 +11,7 @@ const PackageSchema = new mongoose.Schema({
     type: Array
   }
 })
+
+const PackageModel = mongoose.model('package', PackageSchema)
+
+module.exports = PackageModel

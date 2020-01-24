@@ -7,7 +7,8 @@ import {
 } from 'react-router-dom'
 import Header from './Components/Navigation/Header'
 import './stylesheets/Header.scss'
-function App() {
+
+const App = () => {
   return (
     <Router>
       <Header />

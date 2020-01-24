@@ -8,7 +8,13 @@ const app = express()
 dbConnection()
 
 // Create a port variable (variable when deployed, otherwise 5000)
+
 const PORT = process.env.PORT || 5000
+
+//  Create Routes
+app.use('/api/admin', require('./routes/api/admin'))
+
+// app.use('/api/packages', require('./routes/api/packages'))
 
 if (process.env.NODE_ENV == 'production') {
   // set static folder to use
