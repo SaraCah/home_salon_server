@@ -30,7 +30,7 @@ const Header = () => {
       return
     }
 
-    setState({ ...state, [side]: open })
+    setState({ state, [side]: open })
   }
 
   const navItem = navList.map(item => (
