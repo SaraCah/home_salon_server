@@ -4,7 +4,7 @@
   "description": "home_salon application built using the MERN stack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha || true",
     "server": "nodemon server",
     "client": "npm start --prefix home_salon_client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -35,7 +35,9 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "concurrently": "^5.0.2",
+    "mocha": "^7.0.1",
     "nodemon": "^2.0.2"
   }
 }
