@@ -18,10 +18,10 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/About'></Route>
-        <Route exact path='/Contact'></Route>
-        <Route exact path='Packages'></Route>
-        <Route exact path='Testimonials'></Route>
+        <Route exact path='/About' component={About}></Route>
+        <Route exact path='/Contact' component={Contact}></Route>
+        <Route exact path='Packages' component={Packages}></Route>
+        <Route exact path='Testimonials' component={Testimonials}></Route>
       </Switch>
     </Router>
   )
