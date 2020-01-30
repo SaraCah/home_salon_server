@@ -16,7 +16,7 @@ app.use('/api/admin', require('./routes/api/admin'))
 
 // app.use('/api/packages', require('./routes/api/packages'))
 
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV === 'production') {
   // set static folder to use
   app.use(express.static('client/build'))
 
