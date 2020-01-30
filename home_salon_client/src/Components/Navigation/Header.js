@@ -5,7 +5,8 @@ import {
   IconButton,
   AppBar,
   Toolbar,
-  makeStyles
+  makeStyles,
+  Icon
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { useMediaQuery } from 'react-responsive'
@@ -72,6 +73,7 @@ const Header = () => {
       <Toolbar classes={{ root: classes.root }}>
         <div>
           {' '}
+          <img src={`${process.env.PUBLIC_URL}/images/salon-logo.png`} />
           <IconButton
             edge='start'
             className={classes.menuButton}
