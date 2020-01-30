@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "home_salon_client": "npm install --prefix home_salon_client",
     "dev": "concurrently \"npm run server\" \"npm run home_salon_client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix home_salon_client && npm run build --prefix home_salon_client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd home_salon_client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
