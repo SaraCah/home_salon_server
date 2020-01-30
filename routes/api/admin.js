@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const AdminModel = require('../../models/admins')
 const Admin = require('../../models/seeds/Admin')
 
 router.get('/', (req, res) => {

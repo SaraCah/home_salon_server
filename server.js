@@ -18,9 +18,9 @@ app.use('/api/admin', require('./routes/api/admin'))
 
 if (process.env.NODE_ENV === 'production') {
   // set static folder to use
-  app.use(express.static('client/build'))
+  app.use(express.static('home_salon_client/build'))
 
-  // in the package.json, heroku-postbuild runs a script which runs npm build (creates a build file inside the client side files, then uses index.html)
+  // in the package.json, heroku-postbuild runs a script which runs npm build (creates a buihld file inside the client side files, then uses index.html)
   // get "*" specifies any route (apart from the api routes that'll i'll setup above)
   app.get('*', (req, res) => {
     res.sendFile(
