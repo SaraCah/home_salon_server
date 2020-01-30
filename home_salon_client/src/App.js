@@ -12,6 +12,13 @@ const App = () => {
   return (
     <Router>
       <Header />
+      <Switch>
+        <Route exact path='/Home'></Route>
+        <Route exact path='/About'></Route>
+        <Route exact path='/Contact'></Route>
+        <Route exact path='Packages'></Route>
+        <rout exact path='Testimonials'></rout>
+      </Switch>
     </Router>
   )
 }
