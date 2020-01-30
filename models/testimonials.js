@@ -5,7 +5,7 @@ const TestimonialSchema = new mongoose.Schema({
     type: String
   },
   date: {
-    type: String
+    type: Date
   },
   comment: {
     type: String
