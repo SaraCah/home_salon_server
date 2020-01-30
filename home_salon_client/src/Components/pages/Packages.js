@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const Packages = ({ packagename, price, services }) => {
+const Packages = ({ packagename, price, services }) => {
   return (
     <div>
+      <h1></h1>
       <h1>{packagename}</h1>
       <h3>{price}</h3>
       {services.map(service => (
@@ -11,3 +12,5 @@ export const Packages = ({ packagename, price, services }) => {
     </div>
   )
 }
+
+export default Packages

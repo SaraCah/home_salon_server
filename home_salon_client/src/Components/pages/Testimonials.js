@@ -1,7 +1,7 @@
 import React from 'react'
 
 // params are just destructered from the testimonial model
-export const Testimonials = ({ testimonial, name }) => {
+const Testimonials = ({ testimonial, name }) => {
   return (
     <div>
       <h1>Testimonials</h1>
@@ -10,3 +10,5 @@ export const Testimonials = ({ testimonial, name }) => {
     </div>
   )
 }
+
+export default Testimonials
