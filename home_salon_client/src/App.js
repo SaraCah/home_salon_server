@@ -6,6 +6,7 @@ import {
   Switch
 } from 'react-router-dom'
 import Header from './Components/Navigation/Header'
+import Footer from './Components/Navigation/Footer'
 import './stylesheets/Header.scss'
 import Home from './Components/pages/Home'
 import About from './Components/pages/About'
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path='/About' component={About}></Route>
         <Route exact path='/Contact' component={Contact}></Route>
       </Switch>
+      <Footer />
     </Router>
   )
 }

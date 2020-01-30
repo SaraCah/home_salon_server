@@ -1,0 +1,9 @@
+{
+  "root": {
+    "backgroundColor": "#ffa0ea5b",
+    "justifyContent": "flex-end",
+    "top": "auto",
+    "bottom": 0,
+    "height": 64
+  }
+}
