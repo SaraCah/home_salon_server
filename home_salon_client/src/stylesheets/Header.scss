@@ -12,3 +12,15 @@ img {
   height: 130px;
   width: 130px;
 }
+@media (max-width: 1224px) {
+  img {
+    left: calc(100vw - 150px);
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    height: 120px;
+    width: 120px;
+  }
+}
