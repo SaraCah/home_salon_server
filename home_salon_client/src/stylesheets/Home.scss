@@ -1,46 +1,118 @@
-.section-intro3 {
-  color: black;
-  .section-intro1__title {
-    color: pink;
-  }
+@import "./mixins";
 
-  .intro3__product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2.5rem;
-    img {
-      max-width: 65%;
+.section-intro1 {
+    padding: 180px 0 !important;
+    color: white;
+    overflow: hidden;
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
     }
-  }
+    .section-intro1__title {
+      margin: 0 0 24px;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 52px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+    }
+    .section-intro1__subtitle {
+      margin: 0 0 40px;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+    .section-intro1__list {
+      margin: 0 0 30px;
+  
+      .section-intro1__list__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        .material-icons {
+          margin-right: 7px;
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 767px) {
+      padding: 100px 0 !important;
+    }
+    @media only screen and (max-width: 959px) {
+      text-align: center;
+      .section-intro1__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 }
 
-.landing {
-  color: pink;
-
-  h1,h2,h3,h4,h5,h6 {
-    color: pink;
-  }
-
-  // Global styles for landing page
-  a {
-    text-decoration: none;
-  }
-  img {
-    max-width: 100%;
-  }
-  div,
-  section {
-    box-sizing: border-box;
-  }
-  // Background
-  
-  .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
-
-    @include media(1170px) {
+.section-intro3 {
+    color: black;
+    .section-intro1__title {
+      color: pink;
     }
+  
+    .intro3__product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2.5rem;
+      img {
+        max-width: 65%;
+      }
+    }
+  }
+
+  .landing {
+    color: pink;
+  
+    h1,h2,h3,h4,h5,h6 {
+      color: pink;
+    }
+  
+    // Global styles for landing page
+    a {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+    }
+    div,
+    section {
+      box-sizing: border-box;
+    }
+    // Background
+    
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+  
+      @include media(1170px) {
+      }
+    }
+}
+
+.section-intro3 {
+
+    color: black;
+    .section-intro1__title {
+      color: pink;
+    }
+  
+    .intro3__product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2.5rem;
+      img {
+        max-width: 65%;
+      }
+    }
+  }
+
+  @mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
   }
 }
