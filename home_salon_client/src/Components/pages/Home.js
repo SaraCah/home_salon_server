@@ -10,7 +10,12 @@ class Home extends Component {
   render() {
     return (
       <div className="landing">
-
+           <h1 className="section-intro1__title">
+              Welcome to my Home Salon Redcliffe
+              </h1>
+              <div className="section-intro1__subtitle">
+                I offer great services such as;
+              </div>
       </div>
     );
   }
