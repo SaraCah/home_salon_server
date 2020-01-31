@@ -27,6 +27,13 @@ class Home extends Component {
                 < CheckIcon /> Foils
                 </div>
               </div>
+              <Fab
+                  variant="extended"
+                  size="large"
+                  aria-label="Buy"
+                  className="btn-action m-8"
+                >See More?
+                </Fab>
       </div>
     );
   }
