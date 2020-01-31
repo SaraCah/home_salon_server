@@ -1,7 +1,9 @@
 const AdminModel = require('../admins')
 
 const Admin = AdminModel.create({
-  role: 'Admin',
+  name: '',
+  email: '',
+  password: '',
   aboutme: `Your needs are of the utmost importance to me and I am committed to meeting those needs at an extremely low price, see Rates & Packages page for cost of all my services.
 
 As a result of this dedication to you, a high percentage of my business is from repeat customers and referrals. 

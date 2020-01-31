@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import axios from 'axios'
 const CreatePackage = () => {
   const [package, setPackage] = useState({
     name: '',
@@ -14,6 +14,23 @@ const CreatePackage = () => {
 
   const onSubmit = async e => {
     e.preventDefault()
+    const newPackage = {
+      name,
+      price,
+      services
+    }
+
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'aspplication/json'
+        }
+      }
+      const body = JSON.stringify(newPackage)
+      const res = await axios.post()
+    } catch (err) {
+      console.log(err.response.data)
+    }
   }
   return (
     <div>
