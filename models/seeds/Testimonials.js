@@ -1,11 +1,16 @@
-const seeder = require('mongoose-seed')
-const TestimonialModel = require('../testimonials')
+// const seeder = require('mongoose-seed')
+// const TestimonialModel = require('../testimonials')
 
-const dbConnection = async () => {
-  seeder.connect(db, () => {
-    seeder.loadModels([TestimonialModel])
-  })
-  seeder.load
-}
+// const dbConnection = async () => {
+//   seeder.connect(db, () => {
+//     seeder.loadModels([TestimonialModel])
+//     seeder.clearModels(['TestimonialModel'])
+//   })
+// }
 
-module.exports = dbConnection
+// let testimnonials = [{'model': 'TestimonialModel', 'documents':[
+//   'name': ''
+
+// ]]
+
+// module.exports = dbConnection
