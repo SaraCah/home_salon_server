@@ -72,7 +72,7 @@ const Header = () => {
       <Toolbar classes={{ root: classes.root }}>
         <div>
           {' '}
-          <img src={`${process.env.PUBLIC_URL}/images/salon-logo.png`} />
+          <img className="logo" src={`${process.env.PUBLIC_URL}/images/salon-logo.png`} />
           <IconButton
             edge='start'
             className={classes.menuButton}
