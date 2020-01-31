@@ -1,0 +1,46 @@
+.section-intro3 {
+  color: black;
+  .section-intro1__title {
+    color: pink;
+  }
+
+  .intro3__product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    img {
+      max-width: 65%;
+    }
+  }
+}
+
+.landing {
+  color: pink;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: pink;
+  }
+
+  // Global styles for landing page
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  div,
+  section {
+    box-sizing: border-box;
+  }
+  // Background
+  
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include media(1170px) {
+    }
+  }
+}
