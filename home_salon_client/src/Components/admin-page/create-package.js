@@ -11,9 +11,13 @@ const CreatePackage = () => {
 
   const onChange = e =>
     setPackage({ ...package, [e.target.name]: e.target.value })
+
+  const onSubmit = async e => {
+    e.preventDefault()
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={e => onsubmit(e)}>
         <label>
           Package:
           <input
