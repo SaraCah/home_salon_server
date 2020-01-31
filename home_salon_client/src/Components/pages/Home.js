@@ -16,6 +16,17 @@ class Home extends Component {
               <div className="section-intro1__subtitle">
                 I offer great services such as;
               </div>
+              <div className="section-intro1__list">
+                <div className="section-intro1__list__item text-muted">
+                < CheckIcon /> Balayage
+                </div>
+                <div className="section-intro1__list__item text-muted">
+                < CheckIcon /> Ombre
+                </div>
+                <div className="section-intro1__list__item text-muted">
+                < CheckIcon /> Foils
+                </div>
+              </div>
       </div>
     );
   }
