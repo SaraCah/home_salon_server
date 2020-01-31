@@ -1,12 +1,11 @@
 import React from 'react'
-
+import Testimonialform from '../Forms/testimonialform'
 // params are just destructered from the testimonial model
-const Testimonials = ({ testimonial, name }) => {
+const Testimonials = () => {
   return (
     <div>
       <h1>Testimonials</h1>
-      <h3>{name}</h3>
-      <p>{testimonial}</p>
+      <Testimonialform />
     </div>
   )
 }

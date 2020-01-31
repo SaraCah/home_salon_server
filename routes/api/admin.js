@@ -1,11 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const Admin = require('../../models/seeds/Admin')
+let Admin = require('../../models/seeds/AdminSeed')
+const AdminModel = require('../../models/Admin')
 
 router.get('/', (req, res) => {
-  Admin.then(doc => res.send(doc)).catch(err => {
-    res.sendStatus(500)
-  })
+  AdminModel.create(Admin)
+    .then(user => {
+      res.send(user)
+    })
+    .catch(err => {
+      res.sendStatus(err.message)
+    })
 })
 
 module.exports = router
