@@ -41,7 +41,7 @@ class Home extends Component {
             </Grid>
             <Grid item md={6}>
               <div className="intro3__product">
-                <img
+                <img 
                   src="https://i.imgur.com/6haFEAO.png"
                   alt=""
                 />
