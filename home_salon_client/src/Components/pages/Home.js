@@ -5,8 +5,15 @@ import CheckIcon from '@material-ui/icons/Check';
 
 import './../../stylesheets/Home.scss'
 
-const Home = () => {
-  return <div></div>
+class Home extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="landing">
+
+      </div>
+    );
+  }
 }
 
 export default Home
