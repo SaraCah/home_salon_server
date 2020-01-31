@@ -16,8 +16,8 @@ app.use(express.json({ extended: false }))
 
 //  Create Routes
 app.use('/api/admin', require('./routes/api/admin'))
-app.use('/api/packages', require('./routes/api/packages'))
-app.use('/api/testimonials', require('./routes/api/testimonials'))
+// app.use('/api/packages', require('./routes/api/packages'))
+// app.use('/api/testimonials', require('./routes/api/testimonials'))
 
 // app.use('/api/packages', require('./routes/api/packages'))
 
