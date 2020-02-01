@@ -13,6 +13,7 @@ const bcrypt = require('bcryptjs')
 
 router.get('/', auth, async (req, res) => {
   try {
+    // return Admin profile found using id, minus the password
     const admin = await Admin.findById(req.admin.id).select('-password')
     res.json(admin)
   } catch (err) {
