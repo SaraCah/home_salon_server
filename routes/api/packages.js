@@ -45,4 +45,53 @@ router.post(
   }
 )
 
+// API route to return all packages
+router.get('/', async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+
+  try {
+    const packages = await Package.find()
+    res.send(packages)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('Server Error')
+  }
+})
+
+// Route to delete a package
+router.delete('/:id', auth, async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+
+  try {
+    const package = await Package.findById()
+    res.send(package)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('Server Error')
+  }
+})
+
+// Route to update a package
+router.patch('/:id', auth, async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  try {
+    const package = await Package.findByIdAndUpdate(id, req.body, {
+      new: true
+    })
+    res.send(package)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('Server Error')
+  }
+})
+
 module.exports = router
