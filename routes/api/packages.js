@@ -4,7 +4,7 @@ const Package = require('../../models/packages')
 // Auth required to create packages
 const auth = require('../../middleware/auth')
 // Package validation
-const { check, validationResult } = require('express-validator/check')
+const { check, validationResult } = require('express-validator')
 // Admin model
 const Admin = require('../../models/Admin')
 
