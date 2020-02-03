@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import { Grid, Card, Icon } from "@material-ui/core";
 import '../../stylesheets/Contact.scss'
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+
 
 class Contact extends Component {
   state = {};
   cardList = [
     {
-      icon: <AccessAlarmIcon
-      color="primary"></AccessAlarmIcon>,
       title: "Opening Hours",
       text:
         "Wednesday to Friday 5:45 am - 1:30 pm"
     },
     {
-      icon: "phone",
       title: "Phone Number",
       text:
         "0404579007"
@@ -33,7 +30,7 @@ class Contact extends Component {
               {this.cardList.map((card, index) => (
                 <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
                   <Card className="service4__card card">
-                    <Icon className="service4__card__icon">{card.icon}</Icon>
+                    <Icon className="service4__card__icon"></Icon>
                     <div className="service4__card__description">
                       <h3>{card.title}</h3>
                       <p className="m-0">{card.text}</p>
