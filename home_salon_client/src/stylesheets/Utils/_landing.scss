@@ -491,7 +491,7 @@ body {
     overflow: hidden;
   }
   .test {
-    background: red;
+    background: pink;
   }
 }
 
@@ -516,38 +516,5 @@ body {
 
 .section-cta3 {
 
-}
-
-// pricing
-.section-pricing1 {
-  .pricing1__card-header {
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.024);
-
-    span:first-child {
-      font-size: 1rem !important;
-    }
-    span:last-child {
-      font-size: 0.813rem;
-    }
-  }
-
-  .pricing1__highlighted {
-    background: pink !important;
-    span {
-      color: #fff;
-    }
-  }
-
-  .pricing1__card-content {
-    h1 {
-      margin: 0;
-      margin-bottom: 0.5rem;
-      font-size: 2rem;
-    }
-    div {
-      padding: 10px;
-    }
-  }
 }
 
