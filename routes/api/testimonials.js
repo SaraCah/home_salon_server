@@ -10,6 +10,10 @@ router.post('/', (req, res) => {
   const errors = validationResult(req)
   res.json(errors)
   try {
+    const newTestimonial = await new Testimonial({
+      name: req.body.name
+      
+    })
   } catch (err) {
     console.error(err)
     res.status(500).send('Server Error')
