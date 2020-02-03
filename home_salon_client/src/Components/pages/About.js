@@ -40,8 +40,11 @@ class About extends Component {
       <div className="section section-testimonial1" id="testimonial2">
         <div className="container">
           <div className="section__header">
-            <h2 className="align-center">About Me</h2>
-
+          <div className="text-center">
+            <div className="section-intro1__subtitle mb-24 text-secondary">
+            <h2>About Me</h2>
+            </div>
+          </div>
           </div>
 
           <Grid container spacing={4}>
