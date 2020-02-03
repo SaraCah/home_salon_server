@@ -26,7 +26,7 @@ class About extends Component {
       }
     },
     {
-      comment: `"The salon you will be coming to is very relaxed and comfortable where you can unwind, sit back and let me take care of the rest. I am open from 5:45am Wednesday, Thursday and Friday so if you'd like to get your hair coloured and cut before work I am sure I can provide a time that suits you.  
+      comment: `The salon you will be coming to is very relaxed and comfortable where you can unwind, sit back and let me take care of the rest. I am open from 5:45am Wednesday, Thursday and Friday so if you'd like to get your hair coloured and cut before work I am sure I can provide a time that suits you.  
 
       I use the best quality products in the salon and if you have any specific needs regarding products please let me know and I will endeavour to meet those needs. `,
       user: {
