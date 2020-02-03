@@ -38,7 +38,7 @@ class About extends Component {
 
   render() {
     return (
-      <div className="landing">
+      <div className="landing1">
       <div className="section section-testimonial1" id="testimonial2">
         <div className="container">
           <div className="section__header">
