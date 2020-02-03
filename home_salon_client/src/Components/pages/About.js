@@ -1,31 +1,37 @@
 import React, { Component } from "react";
 
-import { Card, CardContent, Grid, Button } from "@material-ui/core";
+import { Card, CardContent, Grid } from "@material-ui/core";
 import '../../stylesheets/About.scss'
+
 
 class About extends Component {
   state = {};
 
-  testimonialList = [
+  aboutList = [
     {
-      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Fugit modi voluptas vero iusto fuga quos totam
-      eius, atis magnam tempora doloribus ducimus dolorem
-      culpa animi beatae tenetur! Sapiente, quia tempora."`,
     
+      comment: `I am 37 and I'm highly qualified in all aspects of hairdressing with 20 plus years experience. I originally trained in a very prestigious salon in London where I had the privilege to qualify with the very best skills in all colouring and cutting techniques. I have worked in Rome, Milan, Ireland, London and now Australia. I would love the opportunity to get to know you and give you the very best quality of hairdressing at the best prices in Redcliffe. `,
+      user: {
+        imageUrl: "./assets/images/face-1.jpg"
+      }
     },
     {
-      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Fugit modi voluptas vero iusto fuga quos totam
-      eius, atis magnam tempora doloribus ducimus dolorem
-      culpa animi beatae tenetur! Sapiente, quia tempora."`,
-  
+      comment: `Your needs are of the utmost importance to me and I am committed to meeting those needs at an extremely low price, see Rates & Packages page for cost of all my services.
+
+      As a result of this dedication to you, a high percentage of my business is from repeat customers and referrals. 
+      
+      I would welcome the opportunity to earn your trust and deliver you the best service in the industry.`,
+      user: {
+        imageUrl: "./assets/images/face-1.jpg"
+      }
     },
     {
-      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Fugit modi voluptas vero iusto fuga quos totam
-      eius, atis magnam tempora doloribus ducimus dolorem
-      culpa animi beatae tenetur! Sapiente, quia tempora."`,
+      comment: `"The salon you will be coming to is very relaxed and comfortable where you can unwind, sit back and let me take care of the rest. I am open from 5:45am Wednesday, Thursday and Friday so if you'd like to get your hair coloured and cut before work I am sure I can provide a time that suits you.  
+
+      I use the best quality products in the salon and if you have any specific needs regarding products please let me know and I will endeavour to meet those needs. `,
+      user: {
+        imageUrl: "./assets/images/face-1.jpg"
+      }
     },
 
   ];
@@ -36,43 +42,33 @@ class About extends Component {
       <div className="section section-testimonial1" id="testimonial2">
         <div className="container">
           <div className="section__header">
-            <h2>About Me</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-              unde inventore molestias ab adipisci eius nisi placeat at.
-            </p>
+            <h2 className="align-center">About Me</h2>
+
           </div>
 
           <Grid container spacing={4}>
-            {this.testimonialList.map((testimonial, index) => (
+            {this.aboutList.map((about, index) => (
               <Grid item md={4} sm={4} key={index}>
                 <Card className="h-100 px-24 card">
                   <CardContent className="testimonial1__card-content">
-                    <div className="pb-16">
-                    
-                      <p className="m-0">{testimonial.comment}</p>
+                  <div className="pb-16">
+                  
+                      <p className="m-0">{about.comment}</p>
                     </div>
 
                     <div className="card__user">
-                     
-                      <div className="pl-16">
-                        <p className="m-0">
-                          <strong>blah</strong>
-                        </p>
-                        <p className="m-0"></p>
-                      </div>
+                      <img
+                        className="p-0 m-0"
+                        src={about.user.imageUrl}
+                        alt="icon"
+                      />
+                  
                     </div>
                   </CardContent>
                 </Card>
               </Grid>
             ))}
           </Grid>
-
-          <div className="text-center pt-40">
-            <Button variant="contained" size="large" color="secondary">
-              load more
-            </Button>
-          </div>
         </div>
       </div>
       </div>
