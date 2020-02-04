@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Package = require('../../models/packages')
+const {PackageModel} = require('../../models/packages')
 // Auth required to create packages
 const auth = require('../../middleware/auth')
 // Package validation
@@ -29,7 +29,7 @@ router.post(
     }
 
     try {
-      const newPackage = new Package({
+      const newPackage = new PackageModel({
         packagename: req.body.packagename,
         price: req.body.price,
         services: req.body.services
@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
   }
 
   try {
-    const packages = await Package.find()
+    const packages = await PackageModel.find()
     res.send(packages)
   } catch (err) {
     console.error(err.message)
@@ -69,7 +69,7 @@ router.delete('/:id', auth, async (req, res) => {
   }
 
   try {
-    const package = await Package.findById()
+    const package = await PackageModel.findById()
     res.send(package)
   } catch (err) {
     console.error(err.message)
@@ -84,7 +84,7 @@ router.patch('/:id', auth, async (req, res) => {
     return res.status(400).json({ errors: errors.array() })
   }
   try {
-    const package = await Package.findByIdAndUpdate(id, req.body, {
+    const package = await PackageModel.findByIdAndUpdate(id, req.body, {
       new: true
     })
     res.send(package)
