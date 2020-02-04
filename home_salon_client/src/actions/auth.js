@@ -48,6 +48,8 @@ export const login = (name, password) => async dispatch => {
       payload: res.data
     });
 
+    dispatch(loadAdmin)
+
     dispatch(loadAdmin());
   } catch (err) {
     const errors = err.response.data.errors;

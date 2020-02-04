@@ -16,7 +16,7 @@ import Testimonials from './Components/pages/Testimonials'
 import Login from './Components/admin-page/sign-in'
 import { loadAdmin } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
-
+import Alert from './Components/layout/Alert'
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -36,6 +36,7 @@ const App = () => {
     <Provider store={store}>
     <Router>
       <Header />
+      <Alert />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/About' component={About}></Route>
