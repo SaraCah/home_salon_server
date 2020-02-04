@@ -42,11 +42,7 @@ const Footer = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <AppBar position='fixed-bottom'>
-      <h1>
-        <Link to='/'>
-          <i className='fas fa-code' /> DevConnector
-        </Link>
-      </h1>
+   
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}
