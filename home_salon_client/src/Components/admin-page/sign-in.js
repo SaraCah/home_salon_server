@@ -1,20 +1,22 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux'
+import { setAlert } from '../../actions/alert'
 
 
-const Login = () => {
+const Login = (props) => {
   const [formData, setFormData] =  useState ({
-    email: '',
+    name: '',
     password: ''
   });
 
-  const { email, password} = formData;
+  const { name, password} = formData;
 
   const onChange = e =>
   setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = async e => {
     e.preventDefault();
-    console.log('SUCCESS')
+    props.setAlert('SUCCESS')
   };
 
   return (
@@ -25,10 +27,10 @@ const Login = () => {
       </p>
       <form onSubmit={e => onSubmit(e)}>
         <input
-        type='email'
-        placeholder='Email Address'
-        name='email'
-        value={email}
+        type='name'
+        placeholder='name'
+        name='name'
+        value={name}
         onChange={e => onChange(e)}
         required
         />
@@ -50,4 +52,4 @@ const Login = () => {
 }
 
 
-export default Login;
+export default connect(null, { setAlert })(Login);
