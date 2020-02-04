@@ -14,10 +14,17 @@ import Contact from './Components/pages/Contact'
 import Packages from './Components/pages/Packages'
 import Testimonials from './Components/pages/Testimonials'
 import Login from './Components/admin-page/sign-in'
+
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
 // gotta change some of these routes to take a render param instead of component but just a placeholder for the time being
 const App = () => {
   // const testimonialList = () => {}
   return (
+    <Provider store={store}>
     <Router>
       <Header />
       <Switch>
@@ -30,6 +37,7 @@ const App = () => {
       </Switch>
       <Footer />
     </Router>
+    </Provider>
   )
 }
 
