@@ -3,7 +3,9 @@ const dbConnection = require('./config/database')
 const path = require('path')
 // call express and store in app variable
 const app = express()
+const cors = require("cors");
 
+app.use(cors());
 // call function connect database to express server (./config/database)
 dbConnection()
 
