@@ -4,7 +4,7 @@
   "description": "home_salon application built using the MERN stack",
   "main": "server.js",
   "scripts": {
-    "test": "mocha || true",
+    "test": "mocha --exit || true",
     "start": "node server.js",
     "server": "nodemon server.js",
     "home_salon_client": "npm install --prefix home_salon_client",
