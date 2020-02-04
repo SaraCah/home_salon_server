@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { setAlert } from './alert';
+
 import {
   ADMIN_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_PROFILE
 } from './types';
 import setAuthToken from '../utils/setAuthToken';
 
@@ -17,7 +17,7 @@ export const loadAdmin = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get('/api/login');
+    const res = await axios.get('http://localhost:5000/api/login');
 
     dispatch({
       type: ADMIN_LOADED,
@@ -30,7 +30,7 @@ export const loadAdmin = () => async dispatch => {
   }
 };
 
-// Login User
+// Login Admin
 export const login = (name, password) => async dispatch => {
   const config = {
     headers: {
@@ -41,7 +41,7 @@ export const login = (name, password) => async dispatch => {
   const body = JSON.stringify({ name, password });
 
   try {
-    const res = await axios.post('/api/login', body, config);
+    const res = await axios.post('http://localhost:5000/api/login', body, config);
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -53,7 +53,7 @@ export const login = (name, password) => async dispatch => {
     const errors = err.response.data.errors;
 
     if (errors) {
-      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach(error => dispatch(setAlert(error.msg)));
     }
 
     dispatch({
@@ -62,8 +62,4 @@ export const login = (name, password) => async dispatch => {
   }
 };
 
-// Logout / Clear Profile
-export const logout = () => dispatch => {
-  dispatch({ type: CLEAR_PROFILE });
-  dispatch({ type: LOGOUT });
-};
+
