@@ -20,6 +20,7 @@ import Alert from './Components/layout/Alert'
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import Dashboard from './Components/dashboard/Dashboard';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -42,7 +43,7 @@ const App = () => {
         <Route exact path='/About' component={About}></Route>
         <Route exact path='/Contact' component={Contact}></Route>
         <Route exact path='/Packages' component={Packages}></Route>
-        
+        <Route exact path='/dashboard' component={Dashboard}></Route>
         <Route exact Path='/Login' component={Login}></Route>
       </Switch>
       <Footer />
