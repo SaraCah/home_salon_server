@@ -24,7 +24,7 @@ import {
       case DELETE_DEAL:
       return {
         ...state,
-        deals: state.deals.filter(deal => deal.dealname !== payload),
+        deals: state.deals.filter(deal => deal._id !== payload),
         loading: false
       };
       

@@ -15,7 +15,7 @@ const DealItem = ({
     <h4>{price}</h4>
     <h4>{services}</h4>
     {!auth.loading && auth.admin && (
-            <button onClick={e => deleteDeal(dealname)}>
+            <button onClick={e => deleteDeal(_id)}>
               Delete
             </button>
           )}
