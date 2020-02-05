@@ -9,7 +9,7 @@ const Footer = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/posts'>Posts</Link>
+        <Link to='/Deals'>Dealss</Link>
       </li>
       <li>
         <Link to='/dashboard'>

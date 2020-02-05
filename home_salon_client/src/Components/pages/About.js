@@ -16,7 +16,7 @@ class About extends Component {
       }
     },
     {
-      comment: `Your needs are of the utmost importance to me and I am committed to meeting those needs at an extremely low price, see Rates & Packages page for cost of all my services.
+      comment: `Your needs are of the utmost importance to me and I am committed to meeting those needs at an extremely low price, see Rates & Deals page for cost of all my services.
       As a result of this dedication to you, a high percentage of my business is from repeat customers and referrals. 
       
       I would welcome the opportunity to earn your trust and deliver you the best service in the industry.`,

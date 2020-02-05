@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-const CreatePackage = () => {
-  const [package, setPackage] = useState({
+const CreateDeal = () => {
+  const [deal, setDeal] = useState({
     name: '',
     price: '',
     services: []
   })
 
-  const { name, price, services } = package
+  const { name, price, services } = deal
 
   const onChange = e =>
-    setPackage({ ...package, [e.target.name]: e.target.value })
+    setDeal({ ...deal, [e.target.name]: e.target.value })
 
   const onSubmit = async e => {
     e.preventDefault()
-    const newPackage = {
+    const newDeal = {
       name,
       price,
       services
@@ -26,8 +26,8 @@ const CreatePackage = () => {
           'Content-Type': 'aspplication/json'
         }
       }
-      const body = JSON.stringify(newPackage)
-      const res = await axios.post()
+      const body = JSON.stringify(newDeal)
+      const res = await axios.deal()
     } catch (err) {
       console.log(err.response.data)
     }
@@ -36,10 +36,10 @@ const CreatePackage = () => {
     <div>
       <form onSubmit={e => onsubmit(e)}>
         <label>
-          Package:
+          Deal:
           <input
             type='text'
-            placeholder='Package Name'
+            placeholder='Deal Name'
             name='name'
             value={name}
             onChange={e => onChange(e)}
@@ -73,4 +73,4 @@ const CreatePackage = () => {
   )
 }
 
-export default CreatePackage
+export default CreateDeal

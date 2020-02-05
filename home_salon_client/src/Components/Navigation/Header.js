@@ -17,7 +17,7 @@ const styling = Styling
 const Header = () => {
   const navStyles = makeStyles(theme => styling)
   const mobileDevice = useMediaQuery({ query: '(max-width: 1224px)' })
-  const navList = ['Home', 'About', 'Packages', 'Testimonials', 'Contact']
+  const navList = ['Home', 'About', 'Deals', 'Testimonials', 'Contact']
   const classes = navStyles()
   const [state, setState] = React.useState({
     right: false
