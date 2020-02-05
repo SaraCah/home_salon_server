@@ -19,16 +19,16 @@ app.use(express.json({ extended: false }))
 //  Create Routes
 app.use('/api/admin', require('./routes/api/admin'))
 app.use('/api/login', require('./routes/api/login'))
-app.use('/api/package', require('./routes/api/packages'))
+app.use('/api/deal', require('./routes/api/deals'))
 // app.use('/api/testimonials', require('./routes/api/testimonials'))
 
-// app.use('/api/packages', require('./routes/api/packages'))
+// app.use('/api/deals', require('./routes/api/deals'))
 
 if (process.env.NODE_ENV === 'production') {
   // set static folder to use
   app.use(express.static('home_salon_client/build'))
 
-  // in the package.json, heroku-postbuild runs a script which runs npm build (creates a buihld file inside the client side files, then uses index.html)
+  // in the deal.json, heroku-postbuild runs a script which runs npm build (creates a buihld file inside the client side files, then uses index.html)
   // get "*" specifies any route (apart from the api routes that'll i'll setup above)
   app.get('*', (req, res) => {
     res.sendFile(

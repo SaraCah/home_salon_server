@@ -1,25 +1,23 @@
 const express = require('express')
 const router = express.Router()
-const {PackageModel} = require('../../models/packages')
-// Auth required to create packages
+const {DealModel} = require('../../models/deals')
+// Auth required to create deals
 const auth = require('../../middleware/auth')
-// Package validation
+// Deal validation
 const { check, validationResult } = require('express-validator')
 // Admin model
 const Admin = require('../../models/Admin')
 
-// API route to create packages
-// POST req => api/package
+// API route to create deals
+// POST req => api/deal
 router.post(
   '/',
   [
     auth,
     [
-      check('packagename', 'Package Name required').exists(),
-      check('price', 'Package Price Required').exists(),
-      check('services', 'A minimum of one service is required').isArray({
-        min: 1
-      })
+      check('dealname', 'Deal Name required').exists(),
+      check('price', 'Deal Price Required').exists(),
+      check('services', 'A minimum of one service is required').exists()
     ]
   ],
   async (req, res) => {
@@ -29,15 +27,15 @@ router.post(
     }
 
     try {
-      const newPackage = new PackageModel({
-        packagename: req.body.packagename,
+      const newDeal = new DealModel({
+        dealname: req.body.dealname,
         price: req.body.price,
         services: req.body.services
       })
 
-      const package = await newPackage.save()
+      const deal = await newDeal.save()
 
-      res.json(package)
+      res.json(deal)
     } catch (err) {
       console.error(err.message)
       res.status(500).send('Server Error')
@@ -45,7 +43,7 @@ router.post(
   }
 )
 
-// API route to return all packages
+// API route to return all deals
 router.get('/', async (req, res) => {
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
@@ -53,15 +51,15 @@ router.get('/', async (req, res) => {
   }
 
   try {
-    const packages = await PackageModel.find()
-    res.send(packages)
+    const deals = await DealModel.find()
+    res.send(deals)
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Server Error')
   }
 })
 
-// Route to delete a package
+// Route to delete a deal
 router.delete('/:id', auth, async (req, res) => {
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
@@ -69,25 +67,29 @@ router.delete('/:id', auth, async (req, res) => {
   }
 
   try {
-    const package = await PackageModel.findById()
-    res.send(package)
+    const deal = await DealModel.findById(req.params.id)
+  
+    await deal.remove();
+
+    res.json({ msg: 'Post removed' });
+
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Server Error')
   }
 })
 
-// Route to update a package
+// Route to update a deal
 router.patch('/:id', auth, async (req, res) => {
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() })
   }
   try {
-    const package = await PackageModel.findByIdAndUpdate(id, req.body, {
+    const deal = await DealModel.findByIdAndUpdate(id, req.body, {
       new: true
     })
-    res.send(package)
+    res.send(deal)
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Server Error')

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../../layout/Spinner';
 import DealItem from './Dealtem';
 import { getDeals } from '../../../actions/deal';
+import DealForm from './DealForm';
 
 const Deals = ({ getDeals, deal: { deals, loading } }) => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Deals = ({ getDeals, deal: { deals, loading } }) => {
       <p className='lead'>
         <i className='fas fa-user' /> Welcome to the community
       </p>
+      <DealForm />
       <div className='deals'>
         {deals.map(deal => (
           <DealItem key={deal._id} deal={deal} />

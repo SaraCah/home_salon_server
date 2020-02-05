@@ -1,7 +1,8 @@
 import {
     GET_DEALS,
     DEAL_ERROR,
-    DELETE_DEAL
+    DELETE_DEAL,
+    ADD_DEAL
   } from '../actions/types';
   
   const initialState = {
@@ -21,6 +22,12 @@ import {
           deals: payload,
           loading: false
         };
+      case ADD_DEAL: 
+      return {
+        ...state,
+        posts:[...state.deals, payload],
+        loading: false
+      };
       case DELETE_DEAL:
       return {
         ...state,

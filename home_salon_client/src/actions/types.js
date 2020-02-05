@@ -9,3 +9,4 @@ export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const GET_DEALS = 'GET_DEALS';
 export const DEAL_ERROR = 'DEAL_ERROR';
 export const DELETE_DEAL = 'DELETE_DEAL'
+export const ADD_DEAL = 'ADD_DEAL'

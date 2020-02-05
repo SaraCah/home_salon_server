@@ -3,7 +3,8 @@ import { setAlert } from './alert'
 import {
     GET_DEALS,
     DEAL_ERROR,
-    DELETE_DEAL
+    DELETE_DEAL,
+    ADD_DEAL
 } from './types'
 
 
@@ -45,3 +46,30 @@ export const deleteDeal = id => async dispatch => {
       });
     }
   };
+
+
+
+// Add Deal
+export const addDeal = formData => async dispatch => {
+
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  try {
+    const res = await axios.post(`http://localhost:5000/api/deal/`, formData, config);
+
+    dispatch({
+      type: ADD_DEAL,
+      payload: res.data
+    });
+
+    dispatch(setAlert('Post Created'));
+  } catch (err) {
+    dispatch({
+      type: DEAL_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
