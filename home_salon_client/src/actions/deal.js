@@ -47,11 +47,7 @@ export const addDeal = formData => async dispatch => {
     }
   }
   try {
-    const res = await axios.post(
-      `http://localhost:5000/api/deal/`,
-      formData,
-      config
-    )
+    const res = await axios.post(`/api/deal/`, formData, config)
 
     dispatch({
       type: ADD_DEAL,
