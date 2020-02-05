@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { DealModel } = require('../../models/deal')
+const { DealModel } = require('../../models/deals')
 // Auth required to create packages
 const auth = require('../../middleware/auth')
 // Package validation
