@@ -8,7 +8,7 @@ import { deleteDeal } from '../../../actions/deal';
 const DealItem = ({
   auth,
   deleteDeal,
-  deal: { dealname, price, services},
+  deal: { _id, dealname, price, services},
 }) => (
   <div className='deal bg-white p-1 my-1'>
     <h4>{dealname}</h4>
