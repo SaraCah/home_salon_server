@@ -19,7 +19,6 @@ const Deals = ({ getDeals, deal: { deals, loading } }) => {
       <p className='lead'>
         <i className='fas fa-user' /> Welcome to the community
       </p>
-      <DealForm />
       <div className='deals'>
         {deals.map(deal => (
           <DealItem key={deal._id} deal={deal} />
