@@ -22,6 +22,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Dashboard from './Components/dashboard/Dashboard';
 import PrivateRoute from './Components/routing/PrivateRoute'
+import CreateDeal from './Components/admin-page/create-deal';
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -43,7 +44,9 @@ const App = () => {
         <Route exact path='/About' component={About}></Route>
         <Route exact path='/Contact' component={Contact}></Route>
         <Route exact path='/Deals' component={Deals}></Route>
+        <Route exact path='/Testimonials' component={Testimonials}></Route>
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
+        <PrivateRoute exact path='/createdeal' component={CreateDeal} />
         <Route exact Path='/Login' component={Login}></Route>
       </Switch>
       <Footer />

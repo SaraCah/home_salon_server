@@ -26,6 +26,11 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
+      <div className="landing">
+      <div className="container">
+      <div className="section__header">
+      <div className="text-center">
+      <div className="section-intro1__subtitle mb-24 text-secondary">
       <h1>Login</h1>
       <p>
         Sign in to Account
@@ -49,6 +54,12 @@ const Login = ({ login, isAuthenticated }) => {
         <input data-cy="loginSubmit" type='submit' value='Login'
         />
       </form>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
     </Fragment>
   )
 }
