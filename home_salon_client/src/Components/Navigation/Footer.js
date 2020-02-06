@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-import { IconButton, AppBar, makeStyles } from '@material-ui/core'
+import { IconButton, AppBar, makeStyles, BottomNavigation } from '@material-ui/core'
 
 const Footer = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (

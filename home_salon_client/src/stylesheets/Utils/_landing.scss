@@ -665,8 +665,13 @@ body {
   }
 }
 
-// pricing
+// prici{ng
 .section-pricing1 {
+  .pink {
+    color: pink;
+  }
+
+
   .pricing1__card-header {
     padding: 12px;
     background: rgba(0, 0, 0, 0.024);
@@ -691,6 +696,10 @@ body {
       margin: 0;
       margin-bottom: 0.5rem;
       font-size: 2rem;
+    }
+
+    .font {
+      color: black,
     }
     div {
       padding: 10px;

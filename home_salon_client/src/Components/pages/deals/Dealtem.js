@@ -16,16 +16,17 @@ const DealItem = ({
   deleteDeal,
   deal: { _id, dealname, price, services }
 }) => (
-  <Grid item md={4} sm={4} >
+  <Grid  lg={3} md={3} sm={6} xs={12} >
      <Card className="text-center card">
-      <CardContent className="testimonial1__card-content">
-      <CardHeader className="pricing1__card-header" title={dealname} />
-        <h4>{price}</h4>
-        <h4>{services}</h4>
+      <CardHeader className="pricing1__card-header pricing1__highlighted pink" title={dealname} />
+      <Divider />
+      <CardContent className="pricing1__card-content">
+        <h2 className="font">${price}.00</h2>
+
+        <h3>{services}</h3>
         {!auth.loading && auth.admin && (
           <button onClick={e => deleteDeal(_id)}>Delete</button>
         )}
-        ;
       </CardContent>
     </Card>
   </Grid>
