@@ -5,6 +5,14 @@ import Spinner from '../../layout/Spinner';
 import DealItem from './Dealtem';
 import { getDeals } from '../../../actions/deal';
 import DealForm from './DealForm';
+import {
+  Grid,
+  Divider,
+  Card,
+  CardHeader,
+  CardContent,
+} from "@material-ui/core";
+
 
 const Deals = ({ getDeals, deal: { deals, loading } }) => {
   useEffect(() => {
@@ -15,16 +23,23 @@ const Deals = ({ getDeals, deal: { deals, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className='large text-primary'>Deals</h1>
-      <p className='lead'>
-        <i className='fas fa-user' /> Welcome to the community
-      </p>
-      <div className='deals'>
+    <div className="landing">
+      <div className="container">
+      <div className="section__header">
+      <div className="text-center">
+      <div className="section-intro1__subtitle mb-24 text-secondary"></div>
+      <Grid container spacing={6}>
         {deals.map(deal => (
           <DealItem key={deal._id} deal={deal} />
         ))}
+        </Grid>
+      
       </div>
- 
+      </div>
+      </div>
+      </div>
+  
+
 
     </Fragment>
   );
