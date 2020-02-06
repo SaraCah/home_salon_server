@@ -127,3 +127,5 @@ We used wireframes.cc to create the wireframes, stackedit for the README.md file
 ## App Architecture Diagram
 
 ![AppArchitecture](./docs/Diagrams/App_Architecture_Diagram.png)
+
+
