@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {DealModel} = require('../../models/deals')
+const { DealModel } = require('../../models/deals')
 // Auth required to create deals
 const auth = require('../../middleware/auth')
 // Deal validation
@@ -68,11 +68,10 @@ router.delete('/:id', auth, async (req, res) => {
 
   try {
     const deal = await DealModel.findById(req.params.id)
-  
-    await deal.remove();
 
-    res.json({ msg: 'Post removed' });
+    await deal.remove()
 
+    res.json({ msg: 'Post removed' })
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Server Error')
