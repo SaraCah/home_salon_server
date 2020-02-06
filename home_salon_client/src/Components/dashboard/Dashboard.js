@@ -1,4 +1,5 @@
-import React, { Fragmentv, Fragment}from 'react'
+import React, {Fragment}from 'react'
+import { Link } from 'react-router-dom'
 import {
     Button,
   } from '@material-ui/core'
@@ -11,10 +12,12 @@ const Dashboard = props => {
     <h2> These are your current deals</h2>
     <p> To delete a deal, simply press delete</p>
     <Deals />
-   
-<Button variant="contained" color="primary">
-  Add Deal?
-</Button>
+    
+    <Button variant="contained" color="secondary">
+    <Link to="/createdeal">Create Deal</Link>
+    </Button>
+
+
 </Fragment>
     )
 }
