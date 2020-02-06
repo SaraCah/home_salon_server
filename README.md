@@ -1,5 +1,8 @@
 # Home Salon Redcliffe
 
+[Github Link](https://github.com/Jyeb/home_salon_server)
+[Deployed Website](https://homesalonredcliffe.herokuapp.com/)
+
 ## Purpose
 
 The purpose of this assessment piece was to find a commercial client and develop an application utilising the appropriate technology stack. Subsequent to the completion of the task, the final product is intended to see purposeful use, and assist the business of the client in question.
@@ -33,6 +36,41 @@ MongoDB is a NoSQL database language used in the development of web applications
 - Express.js
 - React.js
 - Node.js
+
+Some of the other technologies and modules/packages used in the application were as follows:
+
+- redux
+  Redux is a JavaScript library used in the managment of application state. The library was used in the application to simplify the process of making API calls from the server to the frontend of the application.
+
+- NPM
+  npm was used as the package manager to install many various packages used throughout the application.
+
+- express-validator
+  Express validator is a small module used in express applications in order to sanitize and validate input.
+
+- bcryptjs
+  Bcrypt is an encryption software which is used to encrypt and decrypt password in a simplistic manor for maximizing security
+
+- jsonwebtoken
+  Jsonwebtoken is a module which produces authentication tokens to determine a number of security permissions within an application. It determines things such as whether a user, or in this case the admin is logged into their account. Using this information it is able to give the user the ability to perform certain tasks, such as access pages, or edit create and delete objects.
+
+- config
+  Config, as the name suggest is a module which assists in the managment of configuration files. These files include private information such as environment variables.
+
+- mongoose
+  The mongoose module is built for use with mongoDB. It's built in functionality and methods greatly simplify the process of interacting with mongoDB. Examples of these methods is the built in connect method which gives the ability to create a server connection primarily through the use of a single line of code.
+
+- concurrently
+  The concurrently package is used to allow the simultaneous running of script commands. It is used to allow both the client side server, and back-end server to run with a single command.
+
+- request
+  Request is designed to be a simplistic method to make http requests. It support modern syntax with regards to Async/Await, and is used extensively throughout the application.
+
+- Materialui
+  For styling, the MaterialUI css framework was used. It's specifity to react was the primary factor influencing this decision. The framework is designed in a way which has pre-built react components to greatly increase development speed
+
+- Axios
+  Axios was used to make http requests to the API endpoints created on the back end of the application.
 
 ## User Stories
 
@@ -127,5 +165,3 @@ We used wireframes.cc to create the wireframes, stackedit for the README.md file
 ## App Architecture Diagram
 
 ![AppArchitecture](./docs/Diagrams/App_Architecture_Diagram.png)
-
-
