@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { logout } from '../../actions/auth'
 import { IconButton, AppBar, makeStyles } from '@material-ui/core'
-=======
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { logout } from '../../actions/auth';
-import { IconButton, AppBar, makeStyles, BottomNavigation } from '@material-ui/core'
->>>>>>> cb44103bc63dac938542a3c5c380956dd525772e
 
 const Footer = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
