@@ -5,31 +5,31 @@ const jwt = require("jsonwebtoken");
 const chaiHttp = require("chai-http");
 const app = require("../server");
 const expect = chai.expect;
-const { DealModel } = require("../models/deal");
+const { DealModel } = require("../models/deals");
 
 chai.use(chaiHttp);
 
-describe("Packages Routes", () => {
-  it("Number of Packages recieved matches packages in database", done => {
+describe("Deals Routes", () => {
+  it("Number of Deals recieved matches deals in database", done => {
     chai
       .request(app)
-      .get("/api/package")
+      .get("/api/deal")
       .end(async function(err, res) {
         expect(err).to.be.null;
         expect(res).to.have.status(200);
-        // Get packages from db and expect the length to be the same as the packages returned in res
+        // Get deals from db and expect the length to be the same as the deals returned in res
         const count = await DealModel.countDocuments();
         expect(res.body.length).to.equal(count);
         done();
       });
   });
-  it("Should Update a package by package id", done => {
-    let package = new DealModel({
-      packageName: "Test Package 2",
+  it("Should Update a deal by deal id", done => {
+    let deal = new DealModel({
+      dealname: "Test Deal 2",
       price: 220,
       services: ["Baliage", "Toner"]
     });
-    package.save((err, deal) => {
+    deal.save((err, deal) => {
       // Login
       chai
         .request(app)
@@ -42,13 +42,13 @@ describe("Packages Routes", () => {
           // Logged in successfully
           const token = res.body.token;
 
-          // Request package update
+          // Request deal update
           chai
             .request(app)
-            .patch("/api/package/" + package._id)
+            .patch("/api/deal/" + deal._id)
             .set("x-auth-token", token)
             .send({
-              //   packageName: "Test Package 2",
+              //   dealName: "Test Deal 2",
               price: 200
               //   services: ["Baliage", "Toner"]
             })
