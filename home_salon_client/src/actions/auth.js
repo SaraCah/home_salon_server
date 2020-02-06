@@ -18,7 +18,11 @@ export const loadAdmin = () => async dispatch => {
   }
 
   try {
+<<<<<<< HEAD
     const res = await axios.get('/api/login')
+=======
+    const res = await axios.get('/api/login');
+>>>>>>> styling5.0
 
     dispatch({
       type: ADMIN_LOADED,
@@ -42,7 +46,11 @@ export const login = (name, password) => async dispatch => {
   const body = JSON.stringify({ name, password })
 
   try {
+<<<<<<< HEAD
     const res = await axios.post('/api/login', body, config)
+=======
+    const res = await axios.post('/api/login', body, config);
+>>>>>>> styling5.0
 
     dispatch({
       type: LOGIN_SUCCESS,
