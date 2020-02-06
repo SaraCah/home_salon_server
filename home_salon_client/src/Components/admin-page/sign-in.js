@@ -30,8 +30,8 @@ const Login = ({ login, isAuthenticated }) => {
       <p>
         Sign in to Account
       </p>
-      <form onSubmit={e => onSubmit(e)}>
-        <input
+      <form data-cy="loginForm" onSubmit={e => onSubmit(e)}>
+        <input data-cy="username"
         type='name'
         placeholder='name'
         name='name'
@@ -39,14 +39,14 @@ const Login = ({ login, isAuthenticated }) => {
         onChange={e => onChange(e)}
         required
         />
-        <input
+        <input data-cy="password"
         type='password'
         placeholder='Password'
         name='password'
         value={password}
         onChange={e => onChange(e)}
         />
-        <input type='submit' value='Login'
+        <input data-cy="loginSubmit" type='submit' value='Login'
         />
       </form>
     </Fragment>
