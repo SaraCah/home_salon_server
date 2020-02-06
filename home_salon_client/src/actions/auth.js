@@ -18,7 +18,7 @@ export const loadAdmin = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get('http://localhost:5000/api/login');
+    const res = await axios.get('/api/login');
 
     dispatch({
       type: ADMIN_LOADED,
@@ -42,7 +42,7 @@ export const login = (name, password) => async dispatch => {
   const body = JSON.stringify({ name, password });
 
   try {
-    const res = await axios.post('http://localhost:5000/api/login', body, config);
+    const res = await axios.post('/api/login', body, config);
 
     dispatch({
       type: LOGIN_SUCCESS,
